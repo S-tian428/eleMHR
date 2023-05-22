@@ -23,9 +23,11 @@ eleMHR<-function(element_mutation_wd,eleMHR_result_wd){
   gene.end_1 =gene.end[ gene_data$gene[1] ]
   ######Get the  mutation location of this gene
   mut_pos = gene_data$start
-  ######这个基因发生突变的总数
+  
+  ######The total number of mutations in this gene
   #######Calculate the length of gene element
   gene.length<-gene.end_1-gene.start_1+1
+  
   #####Random
   #####Random 1000 times
   Nm = nrow(gene_data)###The number of mutations in this gene element
@@ -34,7 +36,9 @@ eleMHR<-function(element_mutation_wd,eleMHR_result_wd){
   mut_pos.pai = matrix(sample(gene.start_1:gene.end_1, Nm*time, replace=T),nrow=time)
   ### es.random
   es.random<-apply(mut_pos.pai,1,random,gene.length,gene.start_1,gene.end_1)
-  ### es true#####Calculation of real ES
+  
+  ### es true
+  #####Calculation of real ES
   inc = 1/length(mut_pos)
   ####Total number of mutations per location
   nMut.per.location<-table(gene_data$start)
