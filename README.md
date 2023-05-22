@@ -1,2 +1,2 @@
 # eleMHR
-eleMHR is a computational method for the detection and quantification of mutation hotspot regions in genomic elements to discover element driver genes in genome-wide
+eleMHR is a computational method for discovering mutation hotspot regions in genomic elements(CDS,  3UTR, 5UTR, promoters, splice site, etc.) to identify cancer driver genes in genome-wide.
